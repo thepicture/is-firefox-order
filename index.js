@@ -85,12 +85,18 @@ module.exports = (headers, { areRawHeaders } = { areRawHeaders: false }) => {
     indexOfAcceptEncoding = keys.indexOf("accept-encoding");
   }
 
-  return !!(
+  const isGecko =
     indexOfHost < indexOfUserAgent &&
     indexOfUserAgent < indexOfAccept &&
     indexOfAccept < indexOfAcceptLanguage &&
-    indexOfAcceptLanguage < indexOfAcceptEncoding
-  );
+    indexOfAcceptLanguage < indexOfAcceptEncoding;
+
+  const isSafariTor =
+    indexOfHost < indexOfAccept &&
+    indexOfAccept < indexOfUserAgent &&
+    indexOfUserAgent < indexOfAcceptLanguage &&
+    indexOfAcceptLanguage < indexOfAcceptEncoding;
+  return !!(isGecko || isSafariTor);
 };
 
 const throwUnknownInputProtocolError = () => {

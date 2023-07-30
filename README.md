@@ -84,9 +84,10 @@ app.listen(port);
 ## Test
 
 ```bash
-node test
+npm test
 ```
 
 ## Related repository
 
 [is-chrome-order](https://github.com/thepicture/is-chrome-order)
+[is-safari-order](https://github.com/thepicture/is-safari-order)
