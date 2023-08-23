@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Checks if http header order is Firefox",
   "main": "index.js",
+  "repository": "thepicture/is-firefox-order",
   "scripts": {
     "test": "node test"
   },
