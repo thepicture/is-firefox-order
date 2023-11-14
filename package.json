@@ -4,6 +4,7 @@
   "description": "Checks if http header order is Firefox",
   "main": "index.js",
   "repository": "thepicture/is-firefox-order",
+  "files": ["index.js"],
   "scripts": {
     "test": "node test"
   },
